@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Desktop
+    uniqueID: 1371479405
+    locked: 0
+  - name: Window
+    uniqueID: 191981171
+    locked: 0
+  - name: Top
+    uniqueID: 835235103
+    locked: 0

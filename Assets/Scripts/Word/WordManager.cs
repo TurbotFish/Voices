@@ -6,19 +6,19 @@ public class WordManager : MonoBehaviour {
 
 	public List<Word> words;
 
+	public WordSpawner wordSpawner;
+
 	Word activeWord;
 	bool hasActiveWord;
 
 	void Start()
 	{
-		AddWord();
-		AddWord();
-		AddWord();
+		AddWord(Vector2.zero);
 	}
 
-	public void AddWord()
+	public void AddWord(Vector2 pos)
 	{
-		Word word = new Word(WordGenerator.GetRandomWord());
+		Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(pos));
 		words.Add(word);
 	}
 
