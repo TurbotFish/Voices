@@ -6,6 +6,7 @@ public class WindowManager : MonoBehaviour {
 
 	//public HackLineGenerator hackGenerator;
 	public WordSpawner wordSpawner;
+	public WordManager wordManager;
 	public List<Window> windows = new List<Window>();
 	public List<HackWindow> hackWindows = new List<HackWindow>();
 	public HackWindow hackWindowPrefab;
@@ -99,10 +100,19 @@ public class WindowManager : MonoBehaviour {
 		window.words.Add(wordA);
 		window.words.Add(wordB);
 		window.wordKey = wordKey.word;
+
+		FocusOnHackWindow (window);
 	}
 
 	public void FocusOnHackWindow (HackWindow window)
 	{
-		
+		hasActiveWindow = true;
+		activeWindow = window;
+		wordManager.words.Clear ();
+		foreach (Word word in window.words) {
+			wordManager.words.Add (word);
+		}
+
+	
 	}
 }

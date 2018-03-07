@@ -10,11 +10,8 @@ public class WordManager : MonoBehaviour {
 
 	Word activeWord;
 	bool hasActiveWord;
-
-	void Start()
-	{
-		//AddWord(Vector2.zero);
-	}
+	public enum Context {hack,dialog}
+	public Context context;
 
 	public void AddWord(Vector2 pos)
 	{
@@ -49,6 +46,9 @@ public class WordManager : MonoBehaviour {
 		{
 			hasActiveWord = false;
 			words.Remove(activeWord);
+			if (context == Context.hack) {
+				
+			}
 		}
 	}
 

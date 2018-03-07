@@ -934,16 +934,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114272829675089554, guid: 31fb7261656251a4da98361927d9453a,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114272829675089554, guid: 31fb7261656251a4da98361927d9453a,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114489015940999694, guid: 31fb7261656251a4da98361927d9453a,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -954,22 +944,32 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114130383918608668, guid: 31fb7261656251a4da98361927d9453a,
+    - target: {fileID: 114310522581895752, guid: 31fb7261656251a4da98361927d9453a,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114130383918608668, guid: 31fb7261656251a4da98361927d9453a,
+    - target: {fileID: 114310522581895752, guid: 31fb7261656251a4da98361927d9453a,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114310522581895752, guid: 31fb7261656251a4da98361927d9453a,
+    - target: {fileID: 114272829675089554, guid: 31fb7261656251a4da98361927d9453a,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114310522581895752, guid: 31fb7261656251a4da98361927d9453a,
+    - target: {fileID: 114272829675089554, guid: 31fb7261656251a4da98361927d9453a,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114130383918608668, guid: 31fb7261656251a4da98361927d9453a,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114130383918608668, guid: 31fb7261656251a4da98361927d9453a,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -1571,6 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordSpawner: {fileID: 384016666}
+  wordManager: {fileID: 384016663}
   windows:
   - {fileID: 1617078144}
   - {fileID: 1693216723}
