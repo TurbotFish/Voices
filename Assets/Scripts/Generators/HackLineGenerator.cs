@@ -12,11 +12,25 @@ public class HackLineGenerator : MonoBehaviour {
 		new HackLine("[]",1),
 	};
 
-	public static HackLine GetRandomLine ()
+	public static string[] wordList = {"defend","stop","protect","bypass","destroy","delete","save","reroute","data"};
+
+	public static string GetRandomWord ()
+	{
+		int randomIndex = Random.Range(0,wordList.Length);
+		string randomWord = wordList[randomIndex];
+
+		return randomWord;
+	}
+
+
+	public static HackLine GetRandomLine (string word)
 	{
 		int randomIndex = Random.Range(0,lineList.Length);
-		HackLine randomLine = lineList[randomIndex];
-
+		//HackLine randomLine = lineList[randomIndex];
+		HackLine randomLine = new HackLine(lineList[randomIndex].line,lineList[randomIndex].insertIndex);
+		randomLine.line = randomLine.line.Insert(randomLine.insertIndex,word);
 		return randomLine;
 	}
+
+
 }

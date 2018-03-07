@@ -13,7 +13,7 @@ public class WordManager : MonoBehaviour {
 
 	void Start()
 	{
-		AddWord(Vector2.zero);
+		//AddWord(Vector2.zero);
 	}
 
 	public void AddWord(Vector2 pos)

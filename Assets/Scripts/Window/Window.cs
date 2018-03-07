@@ -8,4 +8,6 @@ public class Window : MonoBehaviour {
 	public SpriteRenderer background, topBar;
 	public TextMeshProUGUI title;
 
+
+
 }
