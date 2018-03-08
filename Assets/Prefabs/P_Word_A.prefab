@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 114704299321605114}
+  highlightOn: <b><color=#00BFFF>
+  highlightOff: </b></color>
 --- !u!222 &222522777131862002
 CanvasRenderer:
   m_ObjectHideFlags: 1

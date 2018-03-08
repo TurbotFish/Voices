@@ -10,14 +10,19 @@ public class WordManager : MonoBehaviour {
 
 	Word activeWord;
 	bool hasActiveWord;
+
+
+	public HackWindow activeHackWindow;
+	public string wordKey;
+
 	public enum Context {hack,dialog}
 	public Context context;
 
-	public void AddWord(Vector2 pos)
+	/*public void AddWord(Vector2 pos)
 	{
 		Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord(pos));
 		words.Add(word);
-	}
+	}*/
 
 	public void TypeLetter (char letter)
 	{
@@ -44,10 +49,32 @@ public class WordManager : MonoBehaviour {
 
 		if (hasActiveWord && activeWord.WordTyped())
 		{
+			if (context == Context.hack) {
+				if (activeWord.word == wordKey) {
+					activeHackWindow.Close ();
+				}
+				activeWord.Disappear ();
+			}
+
+			hasActiveWord = false;
+			words.Remove(activeWord);
+		}
+	}
+
+	public void EraseLetter ()
+	{
+		if (hasActiveWord)
+		{
+			activeWord.EraseLetter ();
+		}
+
+
+		if (hasActiveWord && activeWord.WordTyped())
+		{
 			hasActiveWord = false;
 			words.Remove(activeWord);
 			if (context == Context.hack) {
-				
+
 			}
 		}
 	}

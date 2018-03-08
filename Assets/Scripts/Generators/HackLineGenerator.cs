@@ -9,10 +9,12 @@ public class HackLineGenerator : MonoBehaviour {
 		new HackLine("#sys =os.()",9),
 		new HackLine("import socket, sys, os => ",26),
 		new HackLine("s.send ('Host:' + sys.argv[0] +  +'/r/n",32),
-		new HackLine("[]",1),
+		new HackLine("'Project':  => origin",10),
+		new HackLine("//_error : _ (?)",12),
+		new HackLine("[]",1)
 	};
 
-	public static string[] wordList = {"defend","stop","protect","bypass","destroy","delete","save","reroute","data"};
+	public static string[] wordList = {"abort","bypass","clone","defend","erase","fork","ghost","handle","initiate","loop","merge","protect","reroute","save","turtle","uncover","verify","wipe","zero"};
 
 	public static string GetRandomWord ()
 	{

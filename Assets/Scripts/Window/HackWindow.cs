@@ -43,4 +43,9 @@ public class HackWindow : Window {
 	{
 		Debug.Log("you've been hacked");
 	}
+
+	public void Close()
+	{
+		this.gameObject.SetActive (false);
+	}
 }

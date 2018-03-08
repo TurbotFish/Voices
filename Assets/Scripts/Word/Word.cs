@@ -27,7 +27,13 @@ public class Word  {
 	public void TypeLetter()
 	{
 		typeIndex ++;
-		//highlight the letter that has been typed
+		display.HighlightWord(0,typeIndex);
+	}
+
+	public void EraseLetter()
+	{
+		//typeIndex --;
+		//highlight the letter that has been erased
 
 	}
 
@@ -39,5 +45,10 @@ public class Word  {
 			//remove the word
 		}
 		return wordTyped;
+	}
+
+	public void Disappear()
+	{
+		display.gameObject.SetActive (false);
 	}
 }

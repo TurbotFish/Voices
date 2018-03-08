@@ -415,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   words: []
   wordSpawner: {fileID: 384016666}
+  context: 0
 --- !u!4 &384016664
 Transform:
   m_ObjectHideFlags: 0

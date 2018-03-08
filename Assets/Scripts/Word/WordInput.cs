@@ -12,5 +12,8 @@ public class WordInput : MonoBehaviour {
 		{
 			wordManager.TypeLetter(letter);
 		}
+		if (Input.GetKeyDown (KeyCode.Backslash)) {
+			wordManager.EraseLetter ();
+		}
 	}
 }

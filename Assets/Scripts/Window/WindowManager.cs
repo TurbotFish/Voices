@@ -19,6 +19,7 @@ public class WindowManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			CreateHackWindow(11, Vector3.zero);
+			FocusOnHackWindow (hackWindows[hackWindows.Count-1]);
 		}
 	}
 	//DEBUG
@@ -93,7 +94,7 @@ public class WindowManager : MonoBehaviour {
 				addedString = HackLineGenerator.GetRandomLine(words[Random.Range(0,words.Count)]).line;
 			}
 
-			window.baseText.text = window.baseText.text +"\n" +addedString;
+			window.baseText.text = window.baseText.text +addedString+"\n" ;
 		}
 
 		window.words.Add(wordKey);
@@ -101,7 +102,7 @@ public class WindowManager : MonoBehaviour {
 		window.words.Add(wordB);
 		window.wordKey = wordKey.word;
 
-		FocusOnHackWindow (window);
+		hackWindows.Add (window);
 	}
 
 	public void FocusOnHackWindow (HackWindow window)
@@ -112,7 +113,9 @@ public class WindowManager : MonoBehaviour {
 		foreach (Word word in window.words) {
 			wordManager.words.Add (word);
 		}
-
+		wordManager.context = WordManager.Context.hack;
+		wordManager.activeHackWindow = window;
+		wordManager.wordKey = window.wordKey;
 	
 	}
 }
